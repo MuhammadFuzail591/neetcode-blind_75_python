@@ -1,14 +1,15 @@
 from typing import List
 def topKFrequent(nums: List[int], k: int) -> List[int]:
-   initial_set = set(nums)
-   result_arr = []
-   for i in initial_set:
-      res = nums.count(i)
-      if res >= k:
-         result_arr.append(i)
+   freq = {}
 
-   return result_arr
+   for num in nums:
+      freq[num] = freq.get(num, 0) + 1
+   
+   sorted_freq = sorted(freq.items(), key=lambda x:x[1],reverse=True)
+
+   return [num for num, count in sorted_freq[:k]]
+   
 
 
-res = topKFrequent([1,2],2)
+res = topKFrequent([1,1,1,2,2,3],2)
 print(res)
