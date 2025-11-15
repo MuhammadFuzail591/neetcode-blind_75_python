@@ -7,7 +7,15 @@ def isPalindrome(s: str) -> bool:
       result_string = char + result_string
    
    return result_string == newStr
+
+
+def isPalindrome2(s:str) -> bool:
+   newStr = ""
+   for char in s:
+      if char.isalnum():
+         newStr += char.lower()
    
+   return newStr == s[::-1]
 
 
-isPalindrome("tab a cat")
+isPalindrome2("tab a cat")
