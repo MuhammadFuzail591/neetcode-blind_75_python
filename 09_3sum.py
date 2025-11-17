@@ -12,5 +12,10 @@ def threeSum(nums: list[int]) -> list[list[int]]:
    
    return unique_list
 
-threeSum([-1,0,1,2,-1,-4])
+
+def threeSum2(nums:list[int])-> list[list[int]]:
+   print(sorted(nums))
+
+
+threeSum2([-1,0,1,2,-1,-4])
 
