@@ -1,5 +1,4 @@
 def twoSum(numbers:list[int], target:int) -> list[int]:
-
    left = 0
    right = len(numbers) -1
 
